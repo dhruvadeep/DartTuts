@@ -1,0 +1,17 @@
+Standard Input in Dart:
+In Dart programming language, you can take standard input from the user through the console
+ via the use of .readLineSync() function. To take input from the console you need to import 
+ a library, named dart:io from libraries of Dart.
+
+About Stdin Class:
+This class allows the user to read data from standard input in both synchronous and 
+asynchronous ways. The method readLineSync() is one of the method use to take input from 
+user. Refer to offical doc for other method, from here.
+
+
+Usage
+import 'dart.io';
+void main() {
+    String input = Stdin.readLineSync();
+    print("You entered: $input");
+}
