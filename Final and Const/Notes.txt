@@ -1,0 +1,36 @@
+Dart supports assignment of constant value to a variable. Thes are done by the use of the following keyword:
+
+const keyword
+final keyword
+
+These keywords are used to keep the value of a variable static throughout the code base, meaning once the variable is defined its state cannot be altered. There are no limitations if these keywords have a defined data type or not.
+
+Final Keyword In Dart
+The final keyword is used to harcode the values of the variable and it cannot be altered in future, neither any kind of operations performed on these variables can alter its value (state).
+
+// Without datatype
+final variable_name;
+
+// With datatype
+final data_type  variable_name;
+
+
+
+
+//Eg
+void main() { 
+	
+// Assigning value to geek1 
+// variable without datatype 
+final geek1 = "Geeks For Geeks"; 
+	
+// Printing variable geek1 
+print(geek1); 
+	
+// Assigning value to geek2 
+// variable with datatype 
+final String geek2 = "Geeks For Geeks Again!!"; 
+	
+// Printing variable geek2 
+print(geek2); 
+}

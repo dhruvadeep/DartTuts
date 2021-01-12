@@ -1,0 +1,17 @@
+A conditional/decision-making construct evaluates a condition before the instructions are executed.
+
+Decision Making
+Conditional constructs in Dart are classified in the following table.
+
+Sr.No	Statement & Description
+1	if statement
+An if statement consists of a Boolean expression followed by one or more statements.
+
+2	If...Else Statement
+An if can be followed by an optional else block. The else block will execute if the Boolean expression tested by the if block evaluates to false.
+
+3	else…if Ladder
+The else…if ladder is useful to test multiple conditions. Following is the syntax of the same.
+
+4	switch…case Statement
+The switch statement evaluates an expression, matches the expression’s value to a case clause and executes the statements associated with that case.
