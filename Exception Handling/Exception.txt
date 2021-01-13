@@ -1,0 +1,7 @@
+An exception is an error occurred at runtime because Dart runtime could not execute a 
+statement successfully or any other thousand reasons. When an exception is thrown, there is 
+a good chance that our program will crash.
+
+To save our program from crashing, we need to catch an exception. This is done using try 
+catch/finally block you might already be familiar with. Let’s take a classical example of 
+dividing a number by zero.

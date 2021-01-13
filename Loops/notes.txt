@@ -1,1 +1,111 @@
-test
+At times, certain instructions require repeated execution. Loops are an ideal way to do the same. A loop represents a set of instructions that must be repeated. In a loop’s context, a repetition is termed as an iteration.
+
+The following figure illustrates the classification of loops −
+
+Classification Of Loops
+Let’s start the discussion with Definite Loops. A loop whose number of iterations are definite/fixed is termed as a definite loop.
+
+Sr.No	Loop & Description
+1	for loop
+The for loop is an implementation of a definite loop. The for loop executes the code block for a specified number of times. It can be used to iterate over a fixed set of values, such as an array
+
+2	for…in Loop
+The for...in loop is used to loop through an object's properties.
+
+Moving on, let’s now discuss the indefinite loops. An indefinite loop is used when the number of iterations in a loop is indeterminate or unknown. Indefinite loops can be implemented using −
+
+Sr.No	Loop & Description
+1	while Loop
+The while loop executes the instructions each time the condition specified evaluates to true. In other words, the loop evaluates the condition before the block of code is executed.
+
+2	do…while Loop
+The do…while loop is similar to the while loop except that the do...while loop doesn’t evaluate the condition for the first time the loop executes.
+
+Let us now move on and discuss the Loop Control Statements of Dart.
+
+Sr.No	Control Statement & Description
+1	break Statement
+The break statement is used to take the control out of a construct. Using break in a loop causes the program to exit the loop. Following is an example of the break statement.
+
+2	continue Statement
+The continue statement skips the subsequent statements in the current iteration and takes the control back to the beginning of the loop.
+
+Using Labels to Control the Flow
+A label is simply an identifier followed by a colon (:) that is applied to a statement or a block of code. A label can be used with break and continue to control the flow more precisely.
+
+Line breaks are not allowed between the ‘continue’ or ‘break’ statement and its label name. Also, there should not be any other statement in between a label name and an associated loop.
+
+Example: Label with Break
+Live Demo
+void main() { 
+   outerloop: // This is the label name 
+   
+   for (var i = 0; i < 5; i++) { 
+      print("Innerloop: ${i}"); 
+      innerloop: 
+      
+      for (var j = 0; j < 5; j++) { 
+         if (j > 3 ) break ; 
+         
+         // Quit the innermost loop 
+         if (i == 2) break innerloop; 
+         
+         // Do the same thing 
+         if (i == 4) break outerloop; 
+         
+         // Quit the outer loop 
+         print("Innerloop: ${j}"); 
+      } 
+   } 
+}
+The following output is displayed on successful execution of the above code.
+
+Innerloop: 0
+Innerloop: 0
+Innerloop: 1
+Innerloop: 2
+Innerloop: 3
+Innerloop: 1
+Innerloop: 0
+Innerloop: 1
+Innerloop: 2
+Innerloop: 3
+Innerloop: 2
+Innerloop: 3
+Innerloop: 0
+Innerloop: 1
+Innerloop: 2
+Innerloop: 3
+Innerloop: 4
+Example: Label with continue
+Live Demo
+void main() { 
+   outerloop: // This is the label name 
+   
+   for (var i = 0; i < 3; i++) { 
+      print("Outerloop:${i}"); 
+      
+      for (var j = 0; j < 5; j++) { 
+         if (j == 3){ 
+            continue outerloop; 
+         } 
+         print("Innerloop:${j}"); 
+      } 
+   } 
+}
+The following output is displayed on successful execution of the above code.
+
+Outerloop: 0 
+Innerloop: 0 
+Innerloop: 1 
+Innerloop: 2 
+
+Outerloop: 1 
+Innerloop: 0 
+Innerloop: 1 
+Innerloop: 2 
+
+Outerloop: 2 
+Innerloop: 0 
+Innerloop: 1 
+Innerloop: 2
